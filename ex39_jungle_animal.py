@@ -19,8 +19,7 @@ def jungle_animal(animal, my_speed):
     jungle_rules = ["Introduce yourself!", "Stay calm and wait!", "Run!", "Try to ride a zebra!"]
     
     if animal == 'zebra':
-        instruction = jungle_rules[-1]
-        
+        instruction = jungle_rules[-1]   
     elif animal == 'cheetah':
         if my_speed <= 115:
             instruction = jungle_rules[1]
@@ -38,7 +37,6 @@ def main():
 
     t.new_test(func=jungle_animal)
     t.evaluate_result(jungle_animal('cheetah', 120), expected="Run!")
-
 
     t.new_test(func=jungle_animal)
     t.evaluate_result(jungle_animal('zebra', 15), expected="Try to ride a zebra!")
