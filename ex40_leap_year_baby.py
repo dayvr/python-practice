@@ -34,30 +34,25 @@ def output(status,name):
         print("%s is one of an extremely rare species. He is a leap year baby!" % name)
     else:
         print("There's nothing special about %s's birthday. He is not a leap year baby!" % name)
-    return None
 
 def main():
     t = TestTools()
 
+    # Tests is_leap_baby
+    t.new_test(func=is_leap_baby)
+    t.evaluate_result(is_leap_baby(29, 2, 1996), expected=True)
+
+    t.new_test(func=is_leap_baby)
+    t.evaluate_result(is_leap_baby(29, 2, 1900), expected=False)
+
+    # Tests output
     t.new_test(func=output)
-    t.evaluate_result(output(is_leap_baby(29, 2, 1996), 'Calvin'), expected=None)
+    t.evaluate_result(output(True, 'Calvin'), expected=None)
     #>>> "Calvin is one of an extremely rare species. He is a leap year baby!"
 
     t.new_test(func=output)
-    t.evaluate_result(output(is_leap_baby(19, 6, 1978), 'Garfield'), expected=None)
+    t.evaluate_result(output(False, 'Garfield'), expected=None)
     #>>> "There's nothing special about Garfield's birthday. He is not a leap year baby!"
-
-    t.new_test(func=output)
-    t.evaluate_result(output(is_leap_baby(29, 2, 2000), 'Hobbes'), expected=None)
-    #>>> "Hobbes is one of an extremely rare species. He is a leap year baby!"
-
-    t.new_test(func=output)
-    t.evaluate_result(output(is_leap_baby(29, 2, 1900), 'Charlie Brown'), expected=None)
-    #>>> "There's nothing special about Charlie Brown's birthday. He is not a leap year baby!"
-
-    t.new_test(func=output)
-    t.evaluate_result(output(is_leap_baby(28, 2, 1976), 'Odie'), expected=None)
-    #>>> "There's nothing special about Odie's birthday. He is not a leap year baby!"
 
 if __name__ == '__main__':
     main()
