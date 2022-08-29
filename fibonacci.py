@@ -1,18 +1,17 @@
 # Fibonacci series: the sum of two elements define the next
 #
-# Define a procedure, fibonacci, that takes a natural number as its input, and
+# Function that takes a natural number as its input, and
 # returns the value of that fibonacci number.
+#
 # Two Base Cases: fibonacci(0) => 0 ; fibonacci(1) => 1
 # Recursive Case:
 #                n > 1 : fibonacci(n) => fibonacci(n-1) + fibonacci(n-2)
 #
 ###############################################################################
-#
-#Define a faster fibonacci procedure that will enable us to computer
-#fibonacci(36).
-#
+
 from UnitaryTest.test_tools import TestTools
 
+# Faster fibonacci function
 def faster_fibonacci(n):
     current, after = 0, 1
     for _ in range(n):
