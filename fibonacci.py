@@ -15,7 +15,7 @@ from UnitaryTest.test_tools import TestTools
 def faster_fibonacci(n):
     current, after = 0, 1
     for _ in range(n):
-        current, after = after, current + after
+        current, after = after, current + after # a, b = b, a+b
     return current
 
 def fibonacci(n):
