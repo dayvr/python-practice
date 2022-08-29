@@ -1,3 +1,5 @@
+# Fibonacci series: the sum of two elements define the next
+#
 # Define a procedure, fibonacci, that takes a natural number as its input, and
 # returns the value of that fibonacci number.
 # Two Base Cases: fibonacci(0) => 0 ; fibonacci(1) => 1
