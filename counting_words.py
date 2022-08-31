@@ -1,7 +1,4 @@
-# Write a procedure, count_words, which takes as input a string
-# and returns the number of words in the string. You may consider words
-# as strings of characters separated by spaces.
-
+# Function that takes as input a string and returns the number of words in the string. 
 def count_words(a_string):
     counter = 0
     ready = True
