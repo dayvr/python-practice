@@ -1,5 +1,4 @@
 # Test utils
-
 total_run_tests = 0
 num_success = 0
 
