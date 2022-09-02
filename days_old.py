@@ -1,8 +1,6 @@
 # By Websten from forums
-#
 # Given your birthday and the current date, calculate your age in days. 
 # Account for leap days. 
-#
 # Assume that the birthday and current date are correct dates (and no 
 # time travel). 
 #
@@ -56,8 +54,7 @@ def daysBetweenDates(year1, month1, day1, year2, month2, day2):
             
             
 
-# Test routine
-
+# Test
 def test():
     test_cases = [((2012,1,1,2012,2,28), 58), 
                   ((2012,1,1,2012,3,1), 60),
