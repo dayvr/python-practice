@@ -1,11 +1,8 @@
-# Define a procedure, hashtable_get_bucket,
-# that takes two inputs - a hashtable, and
-# a keyword, and returns the bucket where the
-# keyword could occur.
+# Takes two inputs - a hashtable, and a keyword, and 
+# returns the bucket where the keyword could occur.
 
 def hashtable_get_bucket(htable,keyword):
     return htable[hash_string(keyword, len(htable))]
-
 
 def hash_string(keyword,buckets):
     out = 0
