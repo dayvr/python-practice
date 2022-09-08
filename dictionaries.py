@@ -36,7 +36,7 @@ courses = {
                      }
     }
 
-# For looping through the keys in the dictionary, you can use:
+# For looping through the keys in the dictionary:
 #         for <key> in <dictionary>:
 #                    <block>  
 
