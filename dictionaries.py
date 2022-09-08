@@ -1,14 +1,5 @@
 # Dictionaries of Dictionaries (of Dictionaries)
 
-# The next several questions concern the data structure below for keeping
-# track of Udacity's courses (where all of the values are strings):
-
-#    { <hexamester>, { <class>: { <property>: <value>, ... },
-#                                     ... },
-#      ... }
-
-#For example,
-
 from UnitaryTest.test import evaluate_result
 
 courses = {
@@ -45,27 +36,17 @@ courses = {
                      }
     }
 
-# If you want to loop through the keys in the dictionary,
-# you can use the construct below.
+# For looping through the keys in the dictionary, you can use:
 #         for <key> in <dictionary>:
 #                    <block>  
-# You do not need to use this code if you do not want to and may find another, 
-# simpler method to answer this question, although later ones may require this.
-# Define a procedure, is_offered(courses, course, hexamester), that returns 
-# True if the input course is offered in the input hexamester, and returns 
-# False otherwise.  For example,
-# (Note: it is okay if your procedure produces an error if the input 
-# hexamester is not included in courses.
-# For example, is_offered(courses, 'cs101', 'dec2011') can produce an error.)
-# However, do not leave any uncommented statements in your code which lead 
-# to an error as your code will be graded as incorrect.
 
 def courses_offered(courses, hexamester):
     res = []
     for c in courses[hexamester]:
         res.append(c)
     return res
-
+ 
+# Returns True if the input course is offered in the input hexamester, and False otherwise.
 def is_offered(courses, course, hexamester):
     courses_list = courses_offered(courses, hexamester)
     it_is = False
@@ -77,10 +58,8 @@ def is_offered(courses, course, hexamester):
 def is_offered_2(courses, course, hexamester):
     return course in courses[hexamester]
 
-# Define a procedure, when_offered(courses, course), that takes a courses data
-# structure and a string representing a class, and returns a list of strings
+# Takes a courses data structure and a string representing a class, and returns a list of strings
 # representing the hexamesters when the input course is offered.
-
 def when_offered(courses,course):
     result = []
     for i in courses:
@@ -88,14 +67,11 @@ def when_offered(courses,course):
             result.append(i)
     return result
 
-# [Double Gold Star] Define a procedure, involved(courses, person), that takes 
-# as input a courses structure and a person and returns a Dictionary that 
+# Takes as input a courses structure and a person and returns a Dictionary that 
 # describes all the courses the person is involved in.  A person is involved 
 # in a course if they are a value for any property for the course.  The output 
-# Dictionary should have hexamesters as its keys, and each value should be a 
-# list of courses that are offered that hexamester (the courses in the list 
-# can be in any order).
-
+# Dictionary have hexamesters as its keys, and each value a list of courses that 
+# offered that hexamester.
 def involved(courses, person):
     d = {}
     for i in courses:
