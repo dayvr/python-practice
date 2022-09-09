@@ -1,22 +1,19 @@
-# Define a procedure, factorial, that takes a natural number as its input, and
-# returns the number of ways to arrange the input number of items.
-###################################################################################
-# Define a procedure is_palindrome, that takes as input a string, and returns a
-# Boolean indicating if the input string is a palindrome.
-# Base Case: '' => True
-# Recursive Case: if first and last characters don't match => False
-# if they do match, is the middle a palindrome?
-
 from UnitaryTest.test_tools import TestTools
 
+# Takes as input a string, and returns a Boolean indicating if 
+# the input string is a palindrome.
 def is_palindrome_recursive(s):
     if len(s) < 2:
+    # Base Case: '' => True
         return True
+    # Recursive Case: if first and last characters don't match => False
     return s[0] == s[-1] and is_palindrome_recursive(s[1:-1])
 
 def is_palindrome(s):
     return s == s[::-1]
     
+# Takes a natural number as its input, and
+# returns the number of ways to arrange the input number of items.
 def factorial(n):
     if n == 0:
         return 1
