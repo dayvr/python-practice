@@ -1,15 +1,10 @@
-# Write a procedure, rotate which takes as its input a string of lower case
-# letters, a-z, and spaces, and an integer n, and returns the string constructed
-# by shifting each of the letters n steps, and leaving the spaces unchanged.
-# Note that 'a' follows 'z'. You can use an additional procedure if you
-# choose to as long as rotate returns the correct string.
-# Note that n can be positive, negative or zero.
+
 from ex20_shift import shift_n_letters
 from UnitaryTest.test_tools import TestTools
 
-def rotate_improved(string, n):
-    return ''.join([chr(((ord(i)-97+n)%26)+97) if i != ' ' else ' ' for i in string])
-
+# Takes as its input a string of lower case letters, a-z, and spaces, and an integer n, 
+# and returns the string constructed by shifting each of the letters n steps, and leaving 
+# the spaces unchanged.
 def rotate(words, n):
     output = []
     for i in words:
@@ -19,7 +14,10 @@ def rotate(words, n):
             shifted = shift_n_letters(i, n)
             output.append(shifted)
     return ''.join(output)
-    
+ 
+# One-liner version
+def rotate_improved(string, n):
+    return ''.join([chr(((ord(i)-97+n)%26)+97) if i != ' ' else ' ' for i in string])
 
 def main():
     t = TestTools()
