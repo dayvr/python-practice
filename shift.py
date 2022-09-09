@@ -1,25 +1,16 @@
-# Write a procedure, shift, which takes as its input a lowercase letter,
-# a-z and returns the next letter in the alphabet after it, with 'a' 
-# following 'z'.
-#-----------------------------------------------------------------------
-# Write a procedure, shift_n_letters which takes as its input a lowercase
-# letter, a-z, and an integer n, and returns the letter n steps in the
-# alphabet after it. Note that 'a' follows 'z', and that n can be positive,
-#negative or zero.
-
 import string
 from UnitaryTest.test import init_test, new_test, evaluate_result, finish_test
 
+# Takes as its input a lowercase letter, a-z, and an integer n, and returns 
+# the letter n steps in the alphabet after it. Note that 'a' follows 'z', and 
+# that n can be positive, negative or zero.
 def shift_n_letters(letter, n):
     letter_index = ord(letter) - ord('a')
     shifted_index = (letter_index + n) % 26 
     return chr(ord('a') + shifted_index)
 
-def shift_improved(letter):
-    letter_idx = ord(letter) - ord('a')
-    shifted = (letter_idx + 1) % 26
-    return chr(ord('a') + shifted)
-
+# Takes as its input a lowercase letter, a-z and returns 
+# the next letter in the alphabet after it, with 'a' following 'z'.
 def shift(letter):
     alphabet = string.ascii_lowercase
     next_letter = ''
@@ -31,6 +22,11 @@ def shift(letter):
             next_letter = 'a'
             break
     return next_letter
+
+def shift_improved(letter):
+    letter_idx = ord(letter) - ord('a')
+    shifted = (letter_idx + 1) % 26
+    return chr(ord('a') + shifted)
 
 def main():
 
