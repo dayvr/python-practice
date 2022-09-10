@@ -1,4 +1,4 @@
-# Rabbits Multiplying
+# Rabbits Multiplying. Exercise from a Udacity course.
 
 # A (slightly) more realistic model of rabbit multiplication than the Fibonacci
 # model, would assume that rabbits eventually die. For this question, some
