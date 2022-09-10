@@ -1,9 +1,5 @@
-# Spreading Udaciousness
-#
-# One of our modest goals is to teach everyone in the world to program and
-# understand computer science. To estimate how long this will take we have
-# developed a (very flawed!) model:
-#
+# Exercise from Udacity course.
+# Spreading Udaciousness:
 # Everyone answering this question will convince a number, spread, (input to 
 # the model) of their friends to take the course next offering. This will 
 # continue, so that all of the newly recruited students, as well as the original
