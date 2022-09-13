@@ -1,28 +1,12 @@
-# Longest Repetition
-
-# Define a procedure, longest_repetition, that takes as input a 
-# list, and returns the element in the list that has the most 
-# consecutive repetitions. If there are multiple elements that 
-# have the same number of longest repetitions, the result should 
-# be the one that appears first. If the input list is empty, 
-# it should return None.
 from UnitaryTest.test_tools import TestTools
+
+# Longest Repetition
 
 def eval_key(key_str):
     try:
         key = eval(key_str)
     except:
         key = key_str
-    return key
-
-def get_max_pythonic(d):
-    if not d:
-        return None
-    return sorted(d.items(), key=lambda x: x[1], reverse=True)[0][0]
-
-def longest_repetition_pythonic(l):
-    count = create_dict(l)
-    key = eval_key(get_max_pythonic(count))
     return key
 
 def get_max(d, l):
@@ -50,9 +34,25 @@ def create_dict(l):
     rept[str(prev)] = count
     return rept
 
+# Takes as input a list, and returns the element in the list that has the most 
+# consecutive repetitions. If there are multiple elements that 
+# have the same number of longest repetitions, the result should 
+# be the one that appears first. If the input list is empty, 
+# it returns None.
 def longest_repetition(l):
     count = create_dict(l)
     key = get_max(count, l)
+    return key
+
+# A shorter versions of the above functions
+def get_max_pythonic(d):
+    if not d:
+        return None
+    return sorted(d.items(), key=lambda x: x[1], reverse=True)[0][0]
+
+def longest_repetition_pythonic(l):
+    count = create_dict(l)
+    key = eval_key(get_max_pythonic(count))
     return key
             
 def main():
