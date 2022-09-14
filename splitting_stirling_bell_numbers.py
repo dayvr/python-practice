@@ -30,14 +30,11 @@
 
 # B(n) is the sum of S(n,k) for k =1,2, ... , n.
 
-# Write two procedures, stirling and bell. The first procedure, stirling 
-# takes as its inputs two positive integers of which the first is the 
-# number of items and the second is the number of sets into which those 
-# items will be split. The second procedure, bell, takes as input a 
-# positive integer n and returns the Bell number B(n).
-
 from UnitaryTest.test_tools import TestTools
 
+# Takes as its inputs two positive integers of which the first is the 
+# number of items and the second is the number of sets into which those 
+# items will be split. 
 def stirling(n, k):
     if k == 1 or n == k:
         return 1
@@ -45,6 +42,7 @@ def stirling(n, k):
         return 0 
     return k * stirling(n-1, k) + stirling(n-1, k-1)    
 
+# Takes as input a positive integer n and returns the Bell number B(n).
 def bell(n):
     accumulator = 0
     for k in range(1, n+1):
