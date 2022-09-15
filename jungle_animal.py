@@ -1,3 +1,5 @@
+from UnitaryTest.test_tools import TestTools
+
 # You are in the middle of a jungle. 
 # Suddenly you see an animal coming to you. 
 # Here is what you should do if the animal is:
@@ -8,12 +10,8 @@
 #            The speed of a cheetah is 115 km/h.
 # anything else >> "Introduce yourself!"
 
-# Define a procedure, jungle_animal, 
-# that takes as input a string and a number, 
-# an animal and your speed (in km/h), 
+# that takes as input a string and a number, an animal and your speed (in km/h), 
 # and prints out what to do.
-from UnitaryTest.test_tools import TestTools
-
 def jungle_animal(animal, my_speed):
     instruction = ''
     jungle_rules = ["Introduce yourself!", "Stay calm and wait!", "Run!", "Try to ride a zebra!"]
