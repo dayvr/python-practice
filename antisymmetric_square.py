@@ -1,10 +1,8 @@
-# By Dimitris_GR from forums
-# Modify Problem Set 31's (Optional) Symmetric Square to return True 
-# if the given square is antisymmetric and False otherwise. 
+from UnitaryTest.test import evaluate_result
+
+# By Dimitris_GR from forums in Udacity course.
 # An nxn square is called antisymmetric if A[i][j]=-A[j][i] 
 # for each i=0,1,...,n-1 and for each j=0,1,...,n-1.
-
-from UnitaryTest.test import evaluate_result
 
 def getCol(L, pos):
     column = []
