@@ -1,4 +1,6 @@
-#Combatting Link Spam
+from UnitaryTest.test_tools import TestTools
+
+#Combatting Link Spam. Exercise from Udacity course.
 # One of the problems with our page ranking system is pages can 
 # collude with each other to improve their page ranks.  We consider 
 # A->B a reciprocal link if there is a link path from B to A of length 
@@ -20,7 +22,6 @@
 #   - take an extra input k, which is a non-negative integer, and 
 #   - exclude reciprocal links of length up to and including k from 
 #     helping the page rank.
-from UnitaryTest.test_tools import TestTools
 
 def is_reciprocal_link(graph, source, destination, k):
     if k == 0:
