@@ -45,11 +45,11 @@ def main():
     # Tests output
     t.new_test(func=output)
     t.evaluate_result(output(True, 'Calvin'), expected=None)
-    #>>> "Calvin is one of an extremely rare species. He is a leap year baby!"
+    #>>> "Calvin is a leap year baby!"
 
     t.new_test(func=output)
     t.evaluate_result(output(False, 'Garfield'), expected=None)
-    #>>> "There's nothing special about Garfield's birthday. He is not a leap year baby!"
+    #>>> "Garfield is not a leap year baby!"
 
 if __name__ == '__main__':
     main()
