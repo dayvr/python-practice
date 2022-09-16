@@ -1,13 +1,9 @@
+from UnitaryTest.test_tools import TestTools
+
 # A leap year baby is a baby born on Feb 29, which occurs only on a leap year.
-
-# Define a procedure is_leap_baby that takes 3 inputs: day, month and year
-# and returns True if the date is a leap day (Feb 29 in a valid leap year)
-# and False otherwise.
-
 # A year that is a multiple of 4 is a leap year unless the year is
 # divisible by 100 but not a multiple of 400 (so, 1900 is not a leap
 # year but 2000 and 2004 are).
-from UnitaryTest.test_tools import TestTools
 
 def is_leap_year(year):
     if year % 400 == 0:
@@ -18,6 +14,7 @@ def is_leap_year(year):
         return True
     return False
 
+# Returns True if the date is a leap day (Feb 29 in a valid leap year), False otherwise.
 def is_leap_baby(day,month,year):
     is_leap = is_leap_year(year)
     leap_baby = False
@@ -31,9 +28,9 @@ def is_leap_baby(day,month,year):
 
 def output(status,name):
     if status:
-        print("%s is one of an extremely rare species. He is a leap year baby!" % name)
+        print("%s is a leap year baby!" % name)
     else:
-        print("There's nothing special about %s's birthday. He is not a leap year baby!" % name)
+        print("%s is not a leap year baby!" % name)
 
 def main():
     t = TestTools()
