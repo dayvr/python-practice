@@ -1,17 +1,12 @@
-# By Ashwath from forums
-# Given a list of lists representing a n * n matrix as input, 
-# define a  procedure that returns True if the input is an identity matrix 
-# and False otherwise.
-
+from UnitaryTest.test import evaluate_result
+ 
 # An IDENTITY matrix is a square matrix in which all the elements 
 # on the principal/main diagonal are 1 and all the elements outside 
 # the principal diagonal are 0. 
-# (A square matrix is a matrix in which the number of rows 
-# is equal to the number of columns)
+# A square matrix is a matrix in which the number of rows 
+# is equal to the number of columns
 
-from UnitaryTest.test import evaluate_result
-
-def check_sz_row(row, size):
+def check_size_row(row, size):
     res = True
     if len(row) != size:
         res = False
@@ -29,6 +24,7 @@ def check_id_row(row, pos):
                 valid = False
     return valid    
 
+# Returns True if the input is an identity matrix and False otherwise.
 def is_identity_matrix(matrix):
     n = len(matrix)
     i = 0
