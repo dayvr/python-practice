@@ -1,3 +1,4 @@
+# Exercise from Udacity course
 # --------------------------- #
 # Intro to CS Final Project   #
 # Gaming Social Network       #
@@ -37,17 +38,8 @@
 # can be at most one 'John' in the network. Furthermore, connections are not 
 # symmetric - if 'Bob' is connected to 'Alice', it does not mean that 'Alice' is
 # connected to 'Bob'.
-#
-# Project Description
-# ====================
-# Your task is to complete the procedures according to the specifications below
-# as well as to implement a Make-Your-Own procedure (MYOP). You are encouraged 
-# to define any additional helper procedures that can assist you in accomplishing 
-# a task. You are encouraged to test your code by using print statements and the 
-# Test Run button. 
-# ----------------------------------------------------------------------------- 
 
-# Example string input. Use it to test your code.
+# Example string input. Use it to test the code.
 example_input="John is connected to Bryant, Debra, Walter.\
 John likes to play The Movie: The Game, The Legend of Corgi, Dinosaur Diner.\
 Bryant is connected to Olive, Ollie, Freda, Mercedes.\
@@ -139,12 +131,6 @@ def create_data_structure(string_input):
 			user_bucket.append(person_info[1])
 	return network
 
-# ----------------------------------------------------------------------------- # 
-# Note that the first argument to all procedures below is 'network' This is the #
-# data structure that you created with your create_data_structure procedure,    #
-# though it may be modified as you add new users or new connections. Each       #
-# procedure below will then modify or extract information from 'network'        # 
-# ----------------------------------------------------------------------------- #
 
 def get_bucket_info(bucket, idx):
 	field = None
@@ -312,18 +298,7 @@ def count_common_connections(network, user_A, user_B):
 #   >>> ['Abe', 'Gel', 'Sam', 'Zed']
 #   This implies that Abe is connected with Gel, who is connected with Sam, 
 #   who is connected with Zed.
-# 
-# NOTE:
-#   You must solve this problem using recursion!
-# 
-# Hints: 
-# - Be careful how you handle connection loops, for example, A is connected to B. 
-#   B is connected to C. C is connected to B. Make sure your code terminates in 
-#   that case.
-# - If you are comfortable with default parameters, you might consider using one 
-#   in this procedure to keep track of nodes already visited in your search. You 
-#   may safely add default parameters since all calls used in the grading script 
-#   will only include the arguments network, user_A, and user_B.
+#
 def find_path_to_friend(network, user_A, user_B, visited=None):
 	path = []
 	if visited == None:
