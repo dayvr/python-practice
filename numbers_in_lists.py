@@ -1,4 +1,4 @@
-# Numbers in lists by SeanMc from forums
+# Numbers in lists. Exercise from Udacity course.
 # define a procedure that takes in a string of numbers from 1-9 and
 # outputs a list with the following parameters:
 # Every number in the string should be inserted into the list.
@@ -8,8 +8,6 @@
 # sublist until reaching a number z that
 # is greater than the number y. 
 # Then add this number z to the normal list and continue.
-
-#Hint - "int()" turns a string's element into a number
 
 def numbers_in_lists(string):
     result = []
