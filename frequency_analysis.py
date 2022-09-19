@@ -1,5 +1,5 @@
+# Exercise from Udacity course. 
 # Crypto Analysis: Frequency Analysis
-#
 # To analyze encrypted messages, to find out information about the possible 
 # algorithm or even language of the clear text message, one could perform 
 # frequency analysis. This process could be described as simply counting 
@@ -9,8 +9,7 @@
 #
 # The input to the function will be an encrypted body of text that only contains 
 # the lowercase letters a-z. 
-# As output you should return a list of the normalized frequency 
-# for each of the letters a-z. 
+# As output a list of the normalized frequency for each of the letters a-z. 
 # The normalized frequency is simply the number of occurrences, i, 
 # divided by the total number of characters in the message, n.
 
