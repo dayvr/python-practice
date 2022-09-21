@@ -1,14 +1,5 @@
-# Define a procedure, add_page_to_index,
-# that takes three inputs:
-
-#   - index
-#   - url (String)
-#   - content (String)
-
-# It should update the index to include
-# all of the word occurences found in the
-# page content by adding the url to the
-# word's associated url list.
+# It update the index to include all of the word occurences found in the
+# page content by adding the url to the word's associated url list.
 
 def add_to_index(index,keyword,url):
     for entry in index:
